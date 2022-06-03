@@ -17,12 +17,12 @@ const promptUser = () => {
       },
       {
         type: 'input',
-        name: 'Description',
+        name: 'description',
         message: 'Type a description',
       },
       {
         type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'Type installation instructions',
       },
       {
@@ -58,11 +58,15 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  promptUser()
+  .then((answers) => writeToFile('testREADME.md', generateMarkDown(answers)))
+  .then(() => console.log ("success"))
+  .catch((err) => console.error(err));
+}
 
 // Function call to initialize app
 init();
-// promptUser();
-writeToFile(generateMarkDown('testREADME.ms', promptUser()));
+// const theData = promptUser();
+// writeToFile('testREADME.ms', generateMarkDown(theData));
 // generateMarkDown(promptUser);
-
