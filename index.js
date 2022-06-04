@@ -43,7 +43,19 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'tests',
-        message: 'Type instructions for how to test',
+        message: 'Type instructions for how to test: ',
+      },
+      {
+        type: "list",
+        name: "license",
+        message: "Which license would you like?",
+        choices: [
+            "MIT",
+            "Apache V.2",
+            "3-Clause BSD",
+            "2-Clause BSD",
+            "GNU General Public License version 3"
+        ]
       },
     ]);
   };

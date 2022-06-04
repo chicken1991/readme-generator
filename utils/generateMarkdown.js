@@ -16,29 +16,42 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
 
+  ${data.badges}
+
   ## Table of Contents
-  ${data.content}
-  
+  1. [Description](#Description)
+  2. [Insatllation](#Installation)
+  3. [Usage](#Usage)
+  4. [How to Contribute](#contribute)
+  5. [Tests](#Tests)
+  6. [Credits](#Credits)
+  7. [License](#License)
+
+  * * * * * *
+
+  <a name="Installation"></a>
   ## Installation
   ${data.installation}
 
+  <a name="Usage"></a>
   ## Usage
   ${data.usage}
-
-  ## Credits
-  ${data.credits}
-
-  ## License
-  ${data.license}
-
-  ## Badges
-  ${data.badges}
   
+  <a name="Contribute"></a>
   ## How to Contribute
   ${data.contribute}
 
+  <a name="Tests"></a>
   ## Tests
   ${data.tests}
+
+  <a name="Credits"></a>
+  ## Credits
+  ${data.credits}
+
+  <a name="License"></a>
+  ## License
+  ${data.license}
 `;
 }
 
