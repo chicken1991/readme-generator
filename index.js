@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkDown = require('./utils/generateMarkdown.js');
+const renderLicenseBadge = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 // Why an array and not a prompt object?
@@ -60,8 +61,6 @@ const promptUser = () => {
     ]);
   };
 
-// TODO: Write function for license list?
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
@@ -72,13 +71,11 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
   promptUser()
+  // .then((answers) => renderLicenseBadge(answers))
   .then((answers) => writeToFile('testREADME.md', generateMarkDown(answers)))
-  .then(() => console.log ("success"))
   .catch((err) => console.error(err));
 }
 
 // Function call to initialize app
 init();
-// const theData = promptUser();
-// writeToFile('testREADME.ms', generateMarkDown(theData));
-// generateMarkDown(promptUser);
+
