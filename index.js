@@ -6,7 +6,7 @@ const renderLicenseBadge = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 // Why an array and not a prompt object?
-const questions = ["What is the title of the project?", "What is the description?", "How do you install this?", "How do you use this?", "What are the contribution guidelines?", "What are the test instructions?"];
+// const questions = ["What is the title of the project?", "What is the description?", "How do you install this?", "How do you use this?", "What are the contribution guidelines?", "What are the test instructions?"];
 
 //Prompt function with questions
 const promptUser = () => {
@@ -14,37 +14,47 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'title',
-        message: 'Type the project title',
+        message: 'Type the project title: ',
       },
       {
         type: 'input',
         name: 'description',
-        message: 'Type a description',
+        message: 'Type a description: ',
       },
       {
         type: 'input',
         name: 'installation',
-        message: 'Type installation instructions',
+        message: 'Type installation instructions: ',
       },
       {
         type: 'input',
         name: 'usage',
-        message: 'Type how to use this',
-      },
-      {
-        type: 'input',
-        name: 'credits',
-        message: 'Type all who contributed for the Credits section',
+        message: 'Type how to use this: ',
       },
       {
         type: 'input',
         name: 'contribute',
-        message: 'Type instructions for how to contribute',
+        message: 'Type instructions for how to contribue to this project: ',
       },
       {
         type: 'input',
         name: 'tests',
-        message: 'Type instructions for how to test: ',
+        message: 'Type instructions for how to test this project: ',
+      },
+      {
+        type: 'input',
+        name: 'questionsEmail',
+        message: 'Type your contact email for the Questions section: ',
+      },
+      {
+        type: 'input',
+        name: 'questionsGithub',
+        message: 'Type your Github username for the Questions section: ',
+      },
+      {
+        type: 'input',
+        name: 'name',
+        message: 'Type the name you want on your copyright: ',
       },
       {
         type: "list",
@@ -55,7 +65,8 @@ const promptUser = () => {
             "Apache V.2",
             "3-Clause BSD",
             "2-Clause BSD",
-            "GNU General Public License version 3"
+            "GNU General Public License version 3",
+            "No license"
         ]
       },
     ]);
