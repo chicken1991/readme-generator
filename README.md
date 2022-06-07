@@ -48,7 +48,7 @@ Then answer each question. After the last question is answered, a new file 'gene
 
 <a name="questions"></a>
 ## Questions
-For any questions, contact me at dev@chicken1991.anonaddy.com and [visit my github profile](https://github.com/d)
+For any questions, contact me at dev@chicken1991.anonaddy.com and [visit my github profile](https://github.com/chicken1991)
 
 <a name="License"></a>
 ## License
