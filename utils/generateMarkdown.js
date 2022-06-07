@@ -1,39 +1,17 @@
-//license stuff to use later\
+//Prime the license variables for inserting into the readme text
 let badge;
 let lincenseLink;
 var licenseText;
-let year = new Date().getFullYear(); //DO MOMENT HERE FOR CURRENT YEAR
+let year = new Date().getFullYear();
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(data) {
 
+// I combined three starter-code functions into one
+function renderLicense(data) {
+
+  //Check the answer for data.license, and fill out the license variables
   switch (data.license) {
     case "MIT":
       badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-      break;
-    case "Apache V.2":
-      badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-      break;
-    case "3-Clause BSD":
-      badge = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
-      break;
-    case "2-Clause BSD":
-      badge = "[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)";
-      break;
-    case "GNU General Public License version 3":
-      badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-      break;
-    default:
-      badge = "NOT LICENSED";
-  }
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(data) {
-  switch (data.license) {
-    case "MIT":
       lincenseLink = "[License: MIT](https://opensource.org/licenses/MIT)";
       licenseText = `
 \`\`\`md
@@ -47,6 +25,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 `
       break;
     case "Apache V.2":
+      badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
       lincenseLink = "[License](https://opensource.org/licenses/Apache-2.0)"
       licenseText = `
 \`\`\`md
@@ -66,6 +45,7 @@ limitations under the License.
    `
       break;
     case "3-Clause BSD":
+      badge = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
       lincenseLink = "[License](https://opensource.org/licenses/BSD-3-Clause)";
       licenseText = `
 \`\`\`md
@@ -81,6 +61,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 `
       break;
     case "2-Clause BSD":
+      badge = "[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)";
       lincenseLink = "[License](https://opensource.org/licenses/BSD-3-Clause)";
       licenseText = `
 \`\`\`md
@@ -98,6 +79,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 `
       break;
     case "GNU General Public License version 3":
+      badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
       lincenseLink = "[License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)";
       licenseText = `
 \`\`\`md
@@ -118,19 +100,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     `
       break;
     default:
+      badge = "";
       lincenseLink = "";
-      licenseText = ""
+      licenseText = "";
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { }
-
-// TODO: Create a function to generate markdown for README
+// This generates the text file, inserting the appropriate answers from the data objects
 function generateMarkdown(data) {
-  renderLicenseBadge(data);
-  renderLicenseLink(data);
+  renderLicense(data);
   return `# ${data.title}
 
    ${badge}
@@ -170,13 +148,10 @@ function generateMarkdown(data) {
 
   <a name="questions"></a>
   ## Questions
-  For any questions, contact me at ${data.questionsEmail}
-
-  [Visit my github profile](https://github.com/${data.questionsGithub})
+  For any questions, contact me at ${data.questionsEmail} and [visit my github profile](https://github.com/${data.questionsGithub}).
 
   <a name="License"></a>
   ## License
-
 
 ${licenseText}
 
