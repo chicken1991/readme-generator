@@ -83,7 +83,7 @@ function writeToFile(fileName, data) {
 function init() {
   promptUser()
   // .then((answers) => renderLicenseBadge(answers))
-  .then((answers) => writeToFile('README.md', generateMarkDown(answers)))
+  .then((answers) => writeToFile('generatedREADME.md', generateMarkDown(answers)))
   .catch((err) => console.error(err));
 }
 
