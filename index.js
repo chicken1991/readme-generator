@@ -4,9 +4,6 @@ const fs = require('fs');
 const generateMarkDown = require('./utils/generateMarkdown.js');
 const renderLicenseBadge = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
-// Why an array and not a prompt object?
-// const questions = ["What is the title of the project?", "What is the description?", "How do you install this?", "How do you use this?", "What are the contribution guidelines?", "What are the test instructions?"];
 
 //Prompt function with questions
 const promptUser = () => {
@@ -72,17 +69,16 @@ const promptUser = () => {
     ]);
   };
 
-// TODO: Create a function to write README file
+// This writes the readme file to disk
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
     err ? console.error(err) : console.log('Sucessfully wrote file') 
     );
 }
 
-// TODO: Create a function to initialize app
+// The initialization function utilizes promises so that the app waits until all responses are recorded before writing to file
 function init() {
   promptUser()
-  // .then((answers) => renderLicenseBadge(answers))
   .then((answers) => writeToFile('generatedREADME.md', generateMarkDown(answers)))
   .catch((err) => console.error(err));
 }

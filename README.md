@@ -34,6 +34,8 @@ Involk the index.js file with node:
 
 Then answer each question. After the last question is answered, a new file 'generatedREADME.md' will be created at the root.
 
+## [Follow this video for a usage tutorial](https://drive.google.com/file/d/1peUFs760dDQAb6UBq4js1NCNu2PXtQm_/view?usp=sharing)
+
 ![demo1.png](./assets/images/demo1.png)
 
 * * * * *
@@ -52,7 +54,7 @@ For any questions, contact me at dev@chicken1991.anonaddy.com and [visit my gith
 ## License
 
 ```md
-COPYRIGHT 2022 d
+COPYRIGHT 2022 Ben Pitroff
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
