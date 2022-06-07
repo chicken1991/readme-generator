@@ -1,50 +1,55 @@
-# what ever
+# Readme Generator
 
-   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-  ## Description
-  d
+## Description
 
-  * * * * * *
+This node.js app generates a professional readme file based on user input. It utilizes the Inquiere npm package to promt the user for cli input. 
 
-
-  ## Table of Contents
-  1. [Description](#Description)
-  2. [Installation](#Installation)
-  3. [Usage](#Usage)
-  4. [How to Contribute](#contribute)
-  5. [Tests](#Tests)
-  6. [Questions](#questions)
-  7. [License](#License)
-
-  * * * * * *
-
-  <a name="Installation"></a>
-  ## Installation
-  d
-
-  <a name="Usage"></a>
-  ## Usage
-  d
-  
-  <a name="Contribute"></a>
-  ## How to Contribute
-  d
-
-  <a name="Tests"></a>
-  ## Tests
-  d
-
-  <a name="questions"></a>
-  ## Questions
-  For any questions, contact me at d
-
-  [Visit my github profile](https://github.com/d)
-
-  <a name="License"></a>
-  ## License
+* * * * * *
 
 
+## Table of Contents
+1. [Description](#Description)
+2. [Installation](#Installation)
+3. [Usage](#Usage)
+6. [Questions](#questions)
+7. [License](#License)
+
+* * * * * *
+
+<a name="Installation"></a>
+## Installation
+
+You must first have node.js installed on your machine, then intitalize and install the inquirer package in your working directory:
+1. ~/> npm i
+2. ~/> npm install inquirer -y
+
+<a name="Usage"></a>
+## Usage
+
+Involk the index.js file with node:
+
+> ~/> node index.js
+
+Then answer each question. After the last question is answered, a new file 'generatedREADME.md' will be created at the root.
+
+![demo1.png](./assets/images/demo1.png)
+
+* * * * *
+
+![demo2.png](./assets/images/demo2.png)
+
+* * * * *
+
+![demo3.png](./assets/images/demo3.png)
+
+<a name="questions"></a>
+## Questions
+For any questions, contact me at dev@chicken1991.anonaddy.com and [visit my github profile](https://github.com/d)
+
+<a name="License"></a>
+## License
 
 ```md
 COPYRIGHT 2022 d
@@ -60,6 +65,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```   
-   
+
 
 [License](https://opensource.org/licenses/Apache-2.0)
